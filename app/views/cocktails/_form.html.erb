@@ -1,0 +1,12 @@
+<%= simple_form_for @cocktail do |f| %>
+  <% if @cocktail.errors.any? %>
+    <%= @cocktail.errors.full_messages.join(". ") %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.input :name %>
+    <%= f.button :submit %>
+  </div>
+
+
+<% end %>

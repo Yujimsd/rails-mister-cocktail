@@ -1,0 +1,13 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <% if @dose.errors.any? %>
+    <%= @dose.errors.full_messages.join(". ") %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.button :submit %>
+  </div>
+
+
+<% end %>

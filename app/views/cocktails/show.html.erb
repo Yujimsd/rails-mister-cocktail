@@ -1,0 +1,36 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1><%= @cocktail.name %></h1>
+
+      <p>
+        <%= link_to edit_cocktail_path(@cocktail) do %>
+          <i class="fas fa-edit"></i>
+
+        <% end %>
+      </p>
+      <p>
+        <%= link_to cocktail_path(@cocktail), method: :delete do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </p>
+      <p>
+        <%= link_to "Home", cocktails_path  %>
+      </p>
+    </div>
+    <div class="col">
+      <h1>Ingredients</h1>
+      <%= render "doses/form", dose: @dose %>
+      <ul>
+        <%  @cocktail.doses.each do |dose|%>
+        <li><%= dose.ingredient[:name] %></li>
+        <% end %>
+
+
+      </ul>
+    </div>
+  </div>
+</div>

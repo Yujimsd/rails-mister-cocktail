@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Ingredients</h1>
+  <div class="row">
+    <ul>
+    <% @ingredients.each do |ingredient| %>
+      <div class="ingredient-card">
+        <li> <h4><%= link_to ingredient.name, ingredient_path(ingredient) %></h4>
+
+        </li>
+      </div>
+    <% end %>
+    </ul>
+  </div>
+  <%= link_to new_ingedients_path do %>
+    <i class="fas fa-plus-circle"></i>
+  <% end %>
+</div>
