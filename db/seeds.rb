@@ -24,8 +24,3 @@ end
 puts "end"
 
 
-Cocktail.create(name: "Mojito")
-Cocktail.create(name: "Sex on the beach")
-Cocktail.create(name: "Cuba Libre")
-
-
