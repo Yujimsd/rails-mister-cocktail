@@ -4,16 +4,16 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-  def show          # GET /restaurants/:id
+  def show
     @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
   end
 
-  def new           # GET /restaurants/new
+  def new
     @cocktail = Cocktail.new
   end
 
-  def create        # POST /restaurants
+  def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
@@ -25,10 +25,8 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 
-  def article_params
-    params.require(:article).permit(:name, :photo)
-  end
+
 end

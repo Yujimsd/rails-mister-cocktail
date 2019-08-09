@@ -15,9 +15,13 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import { loadDynamicBannerText } from '../components/banner';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+
 import 'bootstrap';
 
 
+
+initUpdateNavbarOnScroll();
 loadDynamicBannerText();
 
 console.log('Hello World from Webpacker')
