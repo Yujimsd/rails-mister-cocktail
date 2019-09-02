@@ -6,7 +6,7 @@ body {
   color: white;
 }
 
-
+// index
 .banner {
   background-size: cover;
   background-position: center;
@@ -49,9 +49,9 @@ body {
     .card-category {
       height: 235px;
       width: auto;
-      crop: fit;
-      // padding: 10px;
-      // margin: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       &:hover{
         // background-color: rgba(255,255,255,0.5);
         opacity:0.8;
@@ -96,4 +96,10 @@ body {
 }
 
 
+// show
 
+.formss {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+}

@@ -25,3 +25,5 @@ initUpdateNavbarOnScroll();
 loadDynamicBannerText();
 
 console.log('Hello World from Webpacker')
+
+
