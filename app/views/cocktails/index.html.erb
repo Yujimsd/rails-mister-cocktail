@@ -1,36 +1,38 @@
 
 
 
-<div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://stmed.net/sites/default/files/bar-wallpapers-28407-3212957.jpg);">
-  <div class="container">
-    <p>
-      <span id="banner-typed-text"></span>
-    </p>
-    <h1>best super car bar in the community</h1>
-    <p>Change my mind</p>
-  </div>
-</div>
-
-
-  <h1>Cocktail</h1>
-  <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-    <div class="cardin">
-      <% if cocktail.photo.present? %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo %>)">
-
-      <% else %>
-        <div class="card-category">
-      <% end %>
-
-           <%= link_to cocktail.name, cocktail_path(cocktail) %>
-
-      </div>
+  <div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://stmed.net/sites/default/files/bar-wallpapers-28407-3212957.jpg);">
+    <div class="container">
+      <p>
+        <span id="banner-typed-text"></span>
+      </p>
+      <h1>best super car bar in the community</h1>
+      <p>Change my mind</p>
     </div>
-    <% end %>
   </div>
-  <%= link_to new_cocktail_path do %>
-    Crea
-  <% end %>
+
+
+    <h1>Cocktail</h1>
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+        <div class="cardin">
+          <% if cocktail.photo.present? %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo %>)">
+
+          <% else %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+          <% end %>
+
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+
+
+        </div>
+        </div>
+      <% end %>
+        </div>
+    </div>
+    <%= link_to new_cocktail_path do %>
+      Crea
+    <% end %>
 
 
