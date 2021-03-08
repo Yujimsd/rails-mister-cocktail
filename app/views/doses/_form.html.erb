@@ -4,9 +4,9 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.input :description %>
     <%= f.association :ingredient %>
-    <%= f.button :submit %>
+    <%= f.input :description, label: "Quantity"%>
+    <%= f.button :submit%>
   </div>
 
 

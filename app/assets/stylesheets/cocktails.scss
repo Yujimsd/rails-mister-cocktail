@@ -1,9 +1,37 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font_color: #E70080;
+
 body {
   background: url(https://images.unsplash.com/photo-1542228846-2d791a09d7d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) repeat 0 0;
-  color: white;
+  color: $font_color;
+}
+
+.mbody{
+  display:flex;
+  flex-grow: 2;
+  flex-direction: column;
+}
+
+//glow banner font
+.glow {
+  font-size: 80px;
+  color: $font_color;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #4A002A, 0 0 20px #4A002A, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #4A002A, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 // index
@@ -11,12 +39,13 @@ body {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  height: 350px;
 }
 
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: $font_color;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -24,7 +53,7 @@ body {
 
 .banner p {
   font-size: 20px;
-  color: white;
+  color: $font_color;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
@@ -39,6 +68,10 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 
+  a {
+    text-decoration: none;
+  }
+
   .cardin  {
       margin: 10px;
       border-color: rgba(239, 5, 105, 0.3);
@@ -52,11 +85,58 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color: $font_color;
+      font-weight: bolder;
+      font-size: 1.8em;
       &:hover{
         // background-color: rgba(255,255,255,0.5);
         opacity:0.8;
       }
     }
+  }
+}
+
+//show
+.showBody{
+  background-repeat: no-repeat;
+  flex-grow: 2;
+  // height: 350px;
+  // height: 100%;
+  width: 100%;
+  // position: absolute;
+  background-size: cover;
+  background-position: center;
+  // z-index: -1;
+  opacity:0.6;
+  display: flex;
+  align-items: center;
+}
+
+.formss{
+  a{
+    color:$font_color;
+    border-color: black;
+  }
+
+  .btn{
+    color: $font_color;
+  }
+  color: $font_color;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 0;
+}
+
+//form
+#new_cocktail{
+  color: $font_color;
+  .btn{
+    color: $font_color;
   }
 }
 
@@ -95,11 +175,3 @@ body {
   }
 }
 
-
-// show
-
-.formss {
-  color: black;
-  background-color: white;
-  border-radius: 20px;
-}
