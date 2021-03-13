@@ -1,35 +1,32 @@
-
-
-
-  <div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path 'bar.jpg' %>');">
-    <div class="container">
-      <p>
-        <span id="banner-typed-text"></span>
-      </p>
-      <h1 class="glow">best super car bar in the community</h1>
-      <p>Change my mind</p>
-    </div>
+<div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path 'bar.jpg' %>');">
+  <div class="container">
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+    <h1 class="glow">best super car bar in the community</h1>
+    <p>Change my mind</p>
   </div>
+</div>
 
 
-    <h1>Cocktail</h1>
 
-    <div class="cards">
-      <% @cocktails.each do |cocktail| %>
-        <%= link_to cocktail_path(cocktail) do %>
-          <div class="cardin">
-            <% if cocktail.photo.present? %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo %>)">
-                <%= cocktail.name %>
-              </div>
-            <% else %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-                <%= cocktail.name %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
+<div class="sub-body">
+  <h1>Cocktail</h1>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="cardin">
+          <% if cocktail.photo.present? %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo %>)">
+              <%= cocktail.name %>
+            </div>
+          <% else %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+              <%= cocktail.name %>
+            </div>
+          <% end %>
+        </div>
       <% end %>
-    </div>
-
-
+    <% end %>
+  </div>
+</div>

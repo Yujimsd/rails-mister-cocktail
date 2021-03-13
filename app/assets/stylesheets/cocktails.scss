@@ -4,7 +4,8 @@
 $font_color: #E70080;
 
 body {
-  background: url(https://images.unsplash.com/photo-1542228846-2d791a09d7d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) repeat 0 0;
+  // background: url(https://images.unsplash.com/photo-1542228846-2d791a09d7d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) repeat 0 0;
+  background: url("blur.jpg");
   color: $font_color;
 }
 
@@ -62,11 +63,15 @@ body {
   border-radius: 50%;
 }
 
+.sub-body{
+  // background-color:red;
+}
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  padding: 0 135px;
 
   a {
     text-decoration: none;
